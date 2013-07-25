@@ -1,0 +1,30 @@
+{
+    "name": "uaquetzalcoatl/qtz-expedia-api",
+    "description": "ZF2 Module. Expedia Api",
+    "homepage": "https://github.com/UaQuetzalcoatl/QtzExpedia",
+    "keywords": ["api", "zf2", "expedia"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Savchenko",
+            "email": "ua.quetzalcoatl@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "QtzExpedia": "src/",
+            "QtzExpediaTest": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:UaQuetzalcoatl/QtzExpedia.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.4",
+        "zendframework/zendframework/zendframework": "2.*"
+    }
+}
