@@ -2,12 +2,16 @@
 
 namespace QtzExpedia;
 
+use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+
 /**
  * Description of Module
  *
  * @author Alex Savchenko
  */
-class Module
+class Module implements ServiceProviderInterface, ConfigProviderInterface, AutoloaderProviderInterface
 {
     public function getConfig()
     {
@@ -22,6 +26,13 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
+        );
+    }
+
+    public function getServiceConfig()
+    {
+        return array(
+            
         );
     }
 }
