@@ -32,7 +32,8 @@ class Module implements ServiceProviderInterface, ConfigProviderInterface, Autol
     public function getServiceConfig()
     {
         return array(
-            
+            'invokables' => array(),
+            'factories' => array(),
         );
     }
 }
