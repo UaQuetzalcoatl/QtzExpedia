@@ -34,7 +34,9 @@ class Expedia implements ServiceManagerAwareInterface, EventManagerAwareInterfac
     {
         $filter = new UnderscoreToCamelCase;
         $resource = $filter->filter($resource);
-        $this->events->trigger('api', $this, array('resource' => $resource));
+        $this->getEventManager()->trigger('api', $this, array('resource' => $resource));
+
+        return $this->serviceManager->get('QtzExpedia\Api\\' . $resource);
     }
 
     /**
